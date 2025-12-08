@@ -51,18 +51,25 @@ Useful for spotting seasonal patterns, key outbreak months and recovery periods.
 
 4. Data Model and DAX
 Data Model
+
 •	Fact table with cumulative confirmed cases by date and country.
 •	Date dimension (Calendar table) with:
+
 o	Date
 o	Year
 o	Quarter
 o	Month
 o	Year-Month
 o	Other derived attributes for time intelligence.
+
 •	Country dimension (implicit in the COVID fact table).
+
+
 The model follows a star-schema approach to keep relationships simple and optimized for DAX.
 Key Measures (Examples)
+
 Some of the measures used in the report include:
+
 •	Daily Cases – Difference in cumulative cases vs previous day.
 •	Yearly Cases – Sum of Daily Cases over the selected year (using DATESYTD).
 •	Cases Last Year – Shifts the context one year back using DATEADD.
@@ -73,7 +80,8 @@ Some of the measures used in the report include:
 •	Days with Zero Cases – Counts days where Daily Cases = 0 for the selected context.
 These measures are applied consistently on both pages, but the overview summarizes at global level while the drillthrough applies them for a single country.
 
-5. How to Use
+6. How to Use
+   
 1.	Open the .pbix file in Power BI Desktop.
 2.	Go to the Overview page:
 o	Use the Select Year slicer to choose a period.
@@ -84,20 +92,37 @@ o	Review monthly YoY variation to understand accelerations or improvements.
 o	Inspect the yearly comparison and heatmap to identify structural patterns.
 
 6. Files
+   
 Typical repository content:
+
 •	Power-BI-COVID-19-Analytics-Dashboard-Cumulative-Daily-Case-Trends.pbix
+
 Main Power BI report file.
+
 •	README.md
+
+
 Project documentation.
+
 •	dataset/ folder with sample source files
-7. Possible Extensions
+
+8. Possible Extensions
+   
 Ideas for future improvements:
+
 •	Add vaccination, testing, or hospitalization metrics to complement case analysis.
+
 •	Include per-capita indicators (cases per 100k inhabitants) for fairer country comparison.
+
 •	Add forecasting models or basic anomaly detection using Python or R scripts in Power BI.
+
 •	Publish the report to Power BI Service and parameterize it for scheduled refresh.
 
-8. Author
+
+9. Author
+    
 Project developed by Juan Manuel Pérez.
+
 •	LinkedIn: https://www.linkedin.com/in/juan-manuel-p%C3%A9rez-garc%C3%ADa-bigdata/
+
 •	Email: juanmanuelccs19@gmail.com
