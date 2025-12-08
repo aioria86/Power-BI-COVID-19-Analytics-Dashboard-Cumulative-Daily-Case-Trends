@@ -70,28 +70,46 @@ Key Measures (Examples)
 
 Some of the measures used in the report include:
 
+
 •	Daily Cases – Difference in cumulative cases vs previous day.
+
 •	Yearly Cases – Sum of Daily Cases over the selected year (using DATESYTD).
+
 •	Cases Last Year – Shifts the context one year back using DATEADD.
+
 •	YoY Change – Absolute difference between Yearly Cases and Cases Last Year.
+
 •	YoY Growth % – Relative variation using DIVIDE( [YoY Change], [Cases Last Year] ).
+
 •	Monthly Cases – Monthly accumulation based on the date context.
+
 •	Monthly YoY % Change – YoY variation at Year-Month grain, with logic to avoid infinite growth from zero-case months.
+
 •	Days with Zero Cases – Counts days where Daily Cases = 0 for the selected context.
+
 These measures are applied consistently on both pages, but the overview summarizes at global level while the drillthrough applies them for a single country.
+
 
 6. How to Use
    
-1.	Open the .pbix file in Power BI Desktop.
-2.	Go to the Overview page:
-o	Use the Select Year slicer to choose a period.
-o	Inspect the treemap, cumulative trend and ranking table to identify high-impact countries.
-3.	Right-click a country in the matrix and choose Drillthrough → Country Details:
-o	Analyze the timeline of daily cases.
-o	Review monthly YoY variation to understand accelerations or improvements.
-o	Inspect the yearly comparison and heatmap to identify structural patterns.
+Open the .pbix file in Power BI Desktop.
+   
+Go to the Overview page:
+   
+Use the Select Year slicer to choose a period.
 
-6. Files
+Inspect the treemap, cumulative trend and ranking table to identify high-impact countries.
+
+Right-click a country in the matrix and choose Drillthrough → Country Details:
+   
+Analyze the timeline of daily cases.
+
+Review monthly YoY variation to understand accelerations or improvements.
+
+Inspect the yearly comparison and heatmap to identify structural patterns.
+
+
+7. Files
    
 Typical repository content:
 
